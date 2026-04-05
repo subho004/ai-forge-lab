@@ -34,3 +34,6 @@
 [submodule "mcp-chatbot"]
 	path = mcp-chatbot
 	url = https://github.com/subho004/mcp-chatbot
+[submodule "finetuning-guide"]
+	path = finetuning-guide
+	url = https://github.com/subho004/finetuning-guide
