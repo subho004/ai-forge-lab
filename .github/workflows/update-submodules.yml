@@ -1,31 +1,34 @@
 name: Monthly Submodule Update
 
 on:
-    schedule:
-        - cron: "0 0 1 * *" # every 1st of month
-    workflow_dispatch: # allows manual trigger
+  schedule:
+    - cron: "0 0 1 * *"
+  workflow_dispatch:
 
 jobs:
-    update:
-        runs-on: ubuntu-latest
+  update:
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: Checkout repo
-              uses: actions/checkout@v4
-              with:
-                  submodules: true
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          submodules: true
 
-            - name: Update submodules to latest
-              run: |
-                  git submodule update --remote --merge
+      - name: Update submodules to latest commit
+        run: |
+          git submodule foreach '
+            git fetch origin
+            git checkout origin/main || git checkout origin/master
+          '
 
-            - name: Commit changes if any
-              run: |
-                  git config user.name "github-actions"
-                  git config user.email "actions@github.com"
-                  git add .
-                  git commit -m "Monthly submodule update" || echo "No changes"
+      - name: Commit changes if any
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "Monthly submodule update" || echo "No changes"
 
-            - name: Push changes
-              run: |
-                  git push
+      - name: Push changes
+        run: |
+          git push
