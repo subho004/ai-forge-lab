@@ -1,0 +1,36 @@
+[submodule "projects/vectorless-llm-evals"]
+	path = projects/vectorless-llm-evals
+	url = https://github.com/subho004/vectorless-llm-evals
+[submodule "projects/auto-research-guide"]
+	path = projects/auto-research-guide
+	url = https://github.com/subho004/auto-research-guide
+[submodule "projects/graph-llms"]
+	path = projects/graph-llms
+	url = https://github.com/subho004/graph-llms
+[submodule "projects/openevolve-guide"]
+	path = projects/openevolve-guide
+	url = https://github.com/subho004/openevolve-guide
+[submodule "projects/podcast-automate"]
+	path = projects/podcast-automate
+	url = https://github.com/subho004/podcast-automate
+[submodule "projects/mcp-chatbot"]
+	path = projects/mcp-chatbot
+	url = https://github.com/subho004/mcp-chatbot
+[submodule "vectorless-llm-evals"]
+	path = vectorless-llm-evals
+	url = https://github.com/subho004/vectorless-llm-evals
+[submodule "auto-research-guide"]
+	path = auto-research-guide
+	url = https://github.com/subho004/auto-research-guide
+[submodule "graph-llms"]
+	path = graph-llms
+	url = https://github.com/subho004/graph-llms
+[submodule "openevolve-guide"]
+	path = openevolve-guide
+	url = https://github.com/subho004/openevolve-guide
+[submodule "podcast-automate"]
+	path = podcast-automate
+	url = https://github.com/subho004/podcast-automate
+[submodule "mcp-chatbot"]
+	path = mcp-chatbot
+	url = https://github.com/subho004/mcp-chatbot
