@@ -15,7 +15,7 @@ Welcome to the **AI Forge Lab**, a premier collection of cutting-edge AI researc
 | [**Fine-Tuning Guide**](./finetuning-guide)  | Comprehensive reference for fine-tuning LLMs (LoRA, QLoRA, DPO, RLHF).              | PEFT, bitsandbytes, TRL         |
 | [**MCP Chatbot**](./mcp-chatbot)             | A modular chatbot implementation using the Model Context Protocol (MCP).            | LangChain, MCP, Groq            |
 | [**Podcast Automate**](./podcast-automate)   | End-to-end automation for podcast production, from script to speech.                | Maya1, TTS, LLMs                |
-| [**A2A Guide**](./external/a2a-guide)        | Action-to-Action guide: practical examples and patterns for chaining agent actions. | Examples, Guides                |
+| [**A2A Guide**](./a2a-guide)                | Action-to-Action guide: practical examples and patterns for chaining agent actions. | Examples, Guides                |
 | [**Vectorless RAG**](./vectorless-llm-evals) | Evaluating RAG systems using PageIndex for hierarchical, vectorless retrieval.      | PageIndex, LangSmith            |
 | [**Graph LLMs**](./graph-llms)               | Integrating Knowledge Graphs (Neo4j) with LLM reasoning for complex queries.        | Neo4j, Cypher, Groq             |
 
@@ -40,18 +40,18 @@ git submodule update --init --recursive
 
 ### A2A Guide submodule
 
-This repository includes the A2A Guide as a git submodule. It's located at `external/a2a-guide` and sourced from https://github.com/subho004/a2a-guide.
+This repository includes the A2A Guide as a git submodule. It's located at `a2a-guide` and sourced from https://github.com/subho004/a2a-guide.
 
 To initialize or update only this submodule after cloning:
 
 ```bash
-git submodule update --init external/a2a-guide
-cd external/a2a-guide
+git submodule update --init a2a-guide
+cd a2a-guide
 git pull origin main
-cd ../..
+cd ..
 ```
 
-You can inspect the submodule contents in `external/a2a-guide` and follow its README for usage examples.
+You can inspect the submodule contents in `a2a-guide` and follow its README for usage examples.
 
 ### 3. Explore Projects
 
@@ -88,5 +88,4 @@ This lab is provided under the **MIT License**.
 ---
 
 ---
-
-\*Created with ❤️ by the [subho004](https://github.com/subho004)
+*Created with ❤️ by the [subho004](https://github.com/subho004)
