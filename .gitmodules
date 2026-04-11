@@ -37,3 +37,6 @@
 [submodule "finetuning-guide"]
 	path = finetuning-guide
 	url = https://github.com/subho004/finetuning-guide
+[submodule "external/a2a-guide"]
+	path = external/a2a-guide
+	url = https://github.com/subho004/a2a-guide
