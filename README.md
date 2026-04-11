@@ -86,5 +86,5 @@ We welcome contributions to any of the sub-modules! Please refer to the individu
 This lab is provided under the **MIT License**.
 
 ---
-
-_Created with ❤️ by the AI Forge Lab Team_
+---
+*Created with ❤️ by the [subho004](https://github.com/subho004)
