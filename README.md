@@ -8,15 +8,16 @@ Welcome to the **AI Forge Lab**, a premier collection of cutting-edge AI researc
 
 ## 🚀 Featured Projects
 
-| Project | Description | Key Tech |
-| :--- | :--- | :--- |
-| [**OpenEvolve**](./openevolve-guide) | Framework for building self-evolving AI agents that improve their own code. | Python, LLMs, Process Isolation |
-| [**Auto-Research**](./auto-research-guide) | Automated technical and scientific research workflows powered by AI. | LangChain, Research APIs |
-| [**Fine-Tuning Guide**](./finetuning-guide) | Comprehensive reference for fine-tuning LLMs (LoRA, QLoRA, DPO, RLHF). | PEFT, bitsandbytes, TRL |
-| [**MCP Chatbot**](./mcp-chatbot) | A modular chatbot implementation using the Model Context Protocol (MCP). | LangChain, MCP, Groq |
-| [**Podcast Automate**](./podcast-automate) | End-to-end automation for podcast production, from script to speech. | Maya1, TTS, LLMs |
-| [**Vectorless RAG**](./vectorless-llm-evals) | Evaluating RAG systems using PageIndex for hierarchical, vectorless retrieval. | PageIndex, LangSmith |
-| [**Graph LLMs**](./graph-llms) | Integrating Knowledge Graphs (Neo4j) with LLM reasoning for complex queries. | Neo4j, Cypher, Groq |
+| Project                                      | Description                                                                         | Key Tech                        |
+| :------------------------------------------- | :---------------------------------------------------------------------------------- | :------------------------------ |
+| [**OpenEvolve**](./openevolve-guide)         | Framework for building self-evolving AI agents that improve their own code.         | Python, LLMs, Process Isolation |
+| [**Auto-Research**](./auto-research-guide)   | Automated technical and scientific research workflows powered by AI.                | LangChain, Research APIs        |
+| [**Fine-Tuning Guide**](./finetuning-guide)  | Comprehensive reference for fine-tuning LLMs (LoRA, QLoRA, DPO, RLHF).              | PEFT, bitsandbytes, TRL         |
+| [**MCP Chatbot**](./mcp-chatbot)             | A modular chatbot implementation using the Model Context Protocol (MCP).            | LangChain, MCP, Groq            |
+| [**Podcast Automate**](./podcast-automate)   | End-to-end automation for podcast production, from script to speech.                | Maya1, TTS, LLMs                |
+| [**A2A Guide**](./external/a2a-guide)        | Action-to-Action guide: practical examples and patterns for chaining agent actions. | Examples, Guides                |
+| [**Vectorless RAG**](./vectorless-llm-evals) | Evaluating RAG systems using PageIndex for hierarchical, vectorless retrieval.      | PageIndex, LangSmith            |
+| [**Graph LLMs**](./graph-llms)               | Integrating Knowledge Graphs (Neo4j) with LLM reasoning for complex queries.        | Neo4j, Cypher, Groq             |
 
 ---
 
@@ -25,17 +26,35 @@ Welcome to the **AI Forge Lab**, a premier collection of cutting-edge AI researc
 This repository uses **Git Submodules** to manage individual projects. To get everything up and running:
 
 ### 1. Clone the Repository
+
 ```bash
 git clone --recursive https://github.com/subho004/ai-forge-lab.git
 cd ai-forge-lab
 ```
 
 ### 2. Initialize Submodules (if already cloned)
+
 ```bash
 git submodule update --init --recursive
 ```
 
+### A2A Guide submodule
+
+This repository includes the A2A Guide as a git submodule. It's located at `external/a2a-guide` and sourced from https://github.com/subho004/a2a-guide.
+
+To initialize or update only this submodule after cloning:
+
+```bash
+git submodule update --init external/a2a-guide
+cd external/a2a-guide
+git pull origin main
+cd ../..
+```
+
+You can inspect the submodule contents in `external/a2a-guide` and follow its README for usage examples.
+
 ### 3. Explore Projects
+
 Each project resides in its own directory and has a specific `README.md` with installation and usage instructions.
 
 ---
@@ -43,15 +62,19 @@ Each project resides in its own directory and has a specific `README.md` with in
 ## 🧪 Research Themes
 
 ### 🧠 Autonomous Evolution
+
 Exploring how LLMs can iteratively improve their own logic and tools through self-correction and performance-based evolution (see **OpenEvolve**).
 
 ### 📖 Model Fine-Tuning & Alignment
+
 Reference guide for advanced alignment strategies including Supervised Fine-Tuning (SFT), LoRA/QLoRA, and preference optimization (DPO) (see **Fine-Tuning Guide**).
 
 ### 🕸️ Graph-Based Reasoning
+
 Moving beyond flat vector embeddings toward structured wisdom using Knowledge Graphs for more accurate and traceable RAG (see **Graph LLMs**).
 
 ### 🎙️ AI Content Pipelines
+
 Streamlining the path from raw data/ideas to polished media outputs like podcasts (see **Podcast Automate**).
 
 ---
@@ -63,4 +86,5 @@ We welcome contributions to any of the sub-modules! Please refer to the individu
 This lab is provided under the **MIT License**.
 
 ---
-*Created with ❤️ by the AI Forge Lab Team*
+
+_Created with ❤️ by the AI Forge Lab Team_
