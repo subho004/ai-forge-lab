@@ -40,3 +40,6 @@
 [submodule "a2a-guide"]
 	path = a2a-guide
 	url = https://github.com/subho004/a2a-guide
+[submodule "gpt-scratch"]
+	path = gpt-scratch
+	url = https://github.com/subho004/attention-to-gpt-scratch

@@ -15,9 +15,10 @@ Welcome to the **AI Forge Lab**, a premier collection of cutting-edge AI researc
 | [**Fine-Tuning Guide**](./finetuning-guide)  | Comprehensive reference for fine-tuning LLMs (LoRA, QLoRA, DPO, RLHF).              | PEFT, bitsandbytes, TRL         |
 | [**MCP Chatbot**](./mcp-chatbot)             | A modular chatbot implementation using the Model Context Protocol (MCP).            | LangChain, MCP, Groq            |
 | [**Podcast Automate**](./podcast-automate)   | End-to-end automation for podcast production, from script to speech.                | Maya1, TTS, LLMs                |
-| [**A2A Guide**](./a2a-guide)                | Action-to-Action guide: practical examples and patterns for chaining agent actions. | Examples, Guides                |
+| [**A2A Guide**](./a2a-guide)                 | Action-to-Action guide: practical examples and patterns for chaining agent actions. | Examples, Guides                |
 | [**Vectorless RAG**](./vectorless-llm-evals) | Evaluating RAG systems using PageIndex for hierarchical, vectorless retrieval.      | PageIndex, LangSmith            |
 | [**Graph LLMs**](./graph-llms)               | Integrating Knowledge Graphs (Neo4j) with LLM reasoning for complex queries.        | Neo4j, Cypher, Groq             |
+| [**GPT-Scratch**](./gpt-scratch)             | Build, deconstruct, and train decoder-only Generative Pre-trained Transformers.     | PyTorch, tiktoken, GPT-2        |
 
 ---
 
@@ -52,6 +53,21 @@ cd ..
 ```
 
 You can inspect the submodule contents in `a2a-guide` and follow its README for usage examples.
+
+### GPT-Scratch submodule
+
+This repository includes the GPT-Scratch Laboratory as a git submodule. It's located at `gpt-scratch` and sourced from https://github.com/subho004/attention-to-gpt-scratch.
+
+To initialize or update only this submodule after cloning:
+
+```bash
+git submodule update --init gpt-scratch
+cd gpt-scratch
+git pull origin main
+cd ..
+```
+
+You can inspect the submodule contents in `gpt-scratch` and follow its README for usage examples.
 
 ### 3. Explore Projects
 
@@ -88,4 +104,5 @@ This lab is provided under the **MIT License**.
 ---
 
 ---
-*Created with ❤️ by the [subho004](https://github.com/subho004)
+
+\*Created with ❤️ by the [subho004](https://github.com/subho004)
