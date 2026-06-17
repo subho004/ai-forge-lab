@@ -43,3 +43,9 @@
 [submodule "gpt-scratch"]
 	path = gpt-scratch
 	url = https://github.com/subho004/attention-to-gpt-scratch
+[submodule "long-document-context"]
+	path = long-document-context
+	url = https://github.com/subho004/agentic-deep-reader
+[submodule "rlm-test"]
+	path = rlm-test
+	url = https://github.com/subho004/bm25-rlm-agent
