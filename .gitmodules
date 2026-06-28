@@ -56,3 +56,6 @@
 [submodule "memgpt-test"]
 	path = memgpt-test
 	url = https://github.com/subho004/mem-git-agent
+[submodule "turboquant-test"]
+	path = turboquant-test
+	url = https://github.com/subho004/turboquant-personal-ai

@@ -23,6 +23,7 @@ Welcome to the **AI Forge Lab**, a premier collection of cutting-edge AI researc
 | [**RLM Research Agent**](./rlm-test)         | In-memory deep-research agent over a local markdown corpus using recursive decomposition. | FastAPI, LangChain, LangGraph, OpenAI |
 | [**RPG World Simulator**](./world-simulator) | Interactive RPG sandbox with Gemini world transition engine, memory reflection, and emergent economy. | FastAPI, Gemini, NetworkX, Cytoscape.js |
 | [**MemGPT Git Agent**](./memgpt-test)        | Self-contained MemGPT agent with tiered memory (persona, human, document catalog, recall, archival) and versioned "memory git". | FastAPI, SQLite, NumPy, OpenAI, MarkItDown |
+| [**TurboQuant Personal AI**](./turboquant-test) | Folder-based personal AI assistant with perfect memory powered by TurboVec quantization and hybrid retrieval. | FastAPI, SQLite, TurboVec, FAISS, OpenAI |
 
 ---
 
@@ -156,6 +157,32 @@ You can inspect the submodule contents in `memgpt-test` and follow its README fo
 Refer to the companion documentation inside the submodule for further details:
 - [notes.md](file:///Users/subhajithait/Documents/testing/ai-forge-lab/memgpt-test/docs/notes.md): Deep architectural explainer covering virtual memory, paging, request lifecycles, and future directions like sleep-time compute.
 
+### TurboQuant Personal AI submodule
+
+This repository includes the TurboQuant Personal AI assistant as a git submodule. It's located at `turboquant-test` and sourced from https://github.com/subho004/turboquant-personal-ai.
+
+To initialize or update only this submodule after cloning:
+
+```bash
+git submodule update --init turboquant-test
+cd turboquant-test
+git pull origin main
+cd ..
+```
+
+You can inspect the submodule contents in `turboquant-test` and follow its README for usage examples.
+
+#### Overview & Retrieval Architecture
+- **TurboVec Vector Index:** Uses `TurboVec` (Rust implementation of Google Research's TurboQuant) for 2-bit or 4-bit vector quantization with AVX-512/NEON SIMD-accelerated flat search, avoiding the need for index training or codebooks while maintaining high recall.
+- **Folder-Based Knowledge Management:** Organizes documents by folders; uploading automatically triggers Microsoft `MarkItDown` parsing (or Whisper for audio files), token-aware chunking, OpenAI embeddings creation, and multi-index updates.
+- **Follow-up Aware Conversation Logic:** Leverages chat history to rewrite multi-turn user queries into standalone search queries before executing retrieval.
+- **Persistent Conversation Memory:** Summarizes chat turns and stores them in a separate TurboVec memory index for cross-session context recall.
+- **Cost & Token Tracker:** Records and monitors real-time usage (input/output tokens and cost in USD) across all operations.
+- **Benchmark Dashboard:** Provides a built-in comparison page comparing TurboVec vs. FAISS IndexPQ and IndexFlat on synthetic datasets.
+
+Refer to the companion documentation inside the submodule for further details:
+- [notes.md](file:///Users/subhajithait/Documents/testing/ai-forge-lab/turboquant-test/docs/notes.md): Engineering notes describing vector quantization theory, Google's TurboQuant algorithm, reciprocal rank fusion details, and implementation choices.
+
 ### 3. Explore Projects
 
 Each project resides in its own directory and has a specific `README.md` with installation and usage instructions.
@@ -191,6 +218,10 @@ Designing LLM-driven role-playing simulations where models act as structured int
 ### 💾 Stateful Memory & Operating System Agent Architectures
 
 Exploring LLMs as operating systems by implementing tiered memory hierarchies (main context "RAM" vs. archival memory "disk"), tool-driven memory paging, context management (eviction and recursive summarization), and versioned memory histories (see [**MemGPT Git Agent**](file:///Users/subhajithait/Documents/testing/ai-forge-lab/memgpt-test)).
+
+### ⚡ High-Efficiency Vector Quantization & Semantic Search
+
+Investigating ultra-low-bit vector quantization methods like Google Research's TurboQuant (compressing 1536-dimensional embeddings to 2-4 bits without training or codebooks) and comparing SIMD-accelerated Rust flat indexes against industry standards like FAISS under real-world document search workloads (see [**TurboQuant Personal AI**](file:///Users/subhajithait/Documents/testing/ai-forge-lab/turboquant-test)).
 
 ---
 
