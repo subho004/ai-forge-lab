@@ -53,3 +53,6 @@
 	path = world-simulator
 	url = https://github.com/subho004/llm-rpg-world-simulator
 
+[submodule "memgpt-test"]
+	path = memgpt-test
+	url = https://github.com/subho004/mem-git-agent

@@ -22,6 +22,7 @@ Welcome to the **AI Forge Lab**, a premier collection of cutting-edge AI researc
 | [**Long-Context Compliance**](./long-document-context) | Multi-agent, multi-pass pipeline for extracting and synthesizing compliance evidence from long PDFs. | FastAPI, Groq, Datalab OCR, BM25 |
 | [**RLM Research Agent**](./rlm-test)         | In-memory deep-research agent over a local markdown corpus using recursive decomposition. | FastAPI, LangChain, LangGraph, OpenAI |
 | [**RPG World Simulator**](./world-simulator) | Interactive RPG sandbox with Gemini world transition engine, memory reflection, and emergent economy. | FastAPI, Gemini, NetworkX, Cytoscape.js |
+| [**MemGPT Git Agent**](./memgpt-test)        | Self-contained MemGPT agent with tiered memory (persona, human, document catalog, recall, archival) and versioned "memory git". | FastAPI, SQLite, NumPy, OpenAI, MarkItDown |
 
 ---
 
@@ -129,6 +130,32 @@ Refer to the companion documentation inside the submodule for further details:
 - [MANUAL.md](file:///Users/subhajithait/Documents/testing/ai-forge-lab/world-simulator/docs/MANUAL.md): Technical architecture, API reference, configuration settings, and database schema.
 - [future_notes.md](file:///Users/subhajithait/Documents/testing/ai-forge-lab/world-simulator/docs/future_notes.md): Future expansion roadmap including continent-scale grid, semantic vector memory, multi-agent conversation, and isometric WebGL rendering.
 
+### MemGPT Git Agent submodule
+
+This repository includes the MemGPT Git Agent as a git submodule. It's located at `memgpt-test` and sourced from https://github.com/subho004/mem-git-agent.
+
+To initialize or update only this submodule after cloning:
+
+```bash
+git submodule update --init memgpt-test
+cd memgpt-test
+git pull origin main
+cd ..
+```
+
+You can inspect the submodule contents in `memgpt-test` and follow its README for usage examples.
+
+#### Overview & Memory Architecture
+- **Tiered Memory Hierarchy:** Maps OS memory concepts to LLMs. Holds a tiny, editable core memory (`persona` and `human` blocks) always in context (like RAM), a message FIFO queue, and a document catalog, while keeping full chat transcripts (recall memory) and embedded document passages (archival memory) on disk.
+- **Control Loop & Heartbeats:** Decouples thinking/acting from speaking using an inner monologue and automated heartbeats, allowing the agent to chain multiple search/edit tool calls before returning a response to the user via `send_message`.
+- **Document Catalog Tier:** Always-in-context single-line metadata summary per document that enables the agent to know its entire library at a glance and selectively search relevant sources.
+- **Versioned "Memory Git":** Tracks all changes to the agent's core memory in a queryable, revertible database, allowing users to view and roll back memory edits.
+- **Context Eviction & Summarization:** Manages token limits by prompting the agent under memory pressure and recursively folding evicted chat history into a running summary.
+- **Hybrid Retrieval & Reranking:** In-process similarity search using pre-normalized NumPy vector operations fused with SQLite FTS5 BM25 keyword search, followed by a cheap LLM-based reranking step.
+
+Refer to the companion documentation inside the submodule for further details:
+- [notes.md](file:///Users/subhajithait/Documents/testing/ai-forge-lab/memgpt-test/docs/notes.md): Deep architectural explainer covering virtual memory, paging, request lifecycles, and future directions like sleep-time compute.
+
 ### 3. Explore Projects
 
 Each project resides in its own directory and has a specific `README.md` with installation and usage instructions.
@@ -160,6 +187,10 @@ Multi-agent pipelines designed to synthesize structured evidence from massive (1
 ### 🗺️ Generative World Simulations & RPGs
 
 Designing LLM-driven role-playing simulations where models act as structured intent parsers and planners, with episodic memory reflection, emergent trade economies, and rumor propagation (see [**RPG World Simulator**](file:///Users/subhajithait/Documents/testing/ai-forge-lab/world-simulator)).
+
+### 💾 Stateful Memory & Operating System Agent Architectures
+
+Exploring LLMs as operating systems by implementing tiered memory hierarchies (main context "RAM" vs. archival memory "disk"), tool-driven memory paging, context management (eviction and recursive summarization), and versioned memory histories (see [**MemGPT Git Agent**](file:///Users/subhajithait/Documents/testing/ai-forge-lab/memgpt-test)).
 
 ---
 
