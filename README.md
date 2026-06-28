@@ -1,6 +1,6 @@
 # 🛠️ AI Forge Lab
 
-![AI Forge Lab Header](assets/header.png)
+![AI Forge Lab Header](assets/header2.png)
 
 Welcome to the **AI Forge Lab**, a premier collection of cutting-edge AI research, autonomous agents, and experimental demos. This repository serves as a centralized hub for projects exploring the boundaries of LLM reasoning, autonomous workflows, and innovative RAG architectures.
 
