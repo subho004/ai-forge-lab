@@ -21,6 +21,7 @@ Welcome to the **AI Forge Lab**, a premier collection of cutting-edge AI researc
 | [**GPT-Scratch**](./gpt-scratch)             | Build, deconstruct, and train decoder-only Generative Pre-trained Transformers.     | PyTorch, tiktoken, GPT-2        |
 | [**Long-Context Compliance**](./long-document-context) | Multi-agent, multi-pass pipeline for extracting and synthesizing compliance evidence from long PDFs. | FastAPI, Groq, Datalab OCR, BM25 |
 | [**RLM Research Agent**](./rlm-test)         | In-memory deep-research agent over a local markdown corpus using recursive decomposition. | FastAPI, LangChain, LangGraph, OpenAI |
+| [**RPG World Simulator**](./world-simulator) | Interactive RPG sandbox with Gemini world transition engine, memory reflection, and emergent economy. | FastAPI, Gemini, NetworkX, Cytoscape.js |
 
 ---
 
@@ -101,6 +102,33 @@ cd ..
 
 You can inspect the submodule contents in `rlm-test` and follow its README for usage examples.
 
+### RPG World Simulator submodule
+
+This repository includes the RPG World Simulator as a git submodule. It's located at `world-simulator` and sourced from https://github.com/subho004/llm-rpg-world-simulator.
+
+To initialize or update only this submodule after cloning:
+
+```bash
+git submodule update --init world-simulator
+cd world-simulator
+git pull origin main
+cd ..
+```
+
+You can inspect the submodule contents in `world-simulator` and follow its README and docs folder for usage examples.
+
+#### Overview & Mechanics
+- **World Transition Engine:** LLM parses player intent and NPC actions to output structured state diffs, processed via a validation choke point (`DiffApplier`).
+- **Emergent Quests:** short supply triggers fetch quests; completing them pays rewards, resolves shortages, and spawns rumors.
+- **Cognitive Agent Memory:** episodic memories are periodically reflected upon and consolidated into abstract insights.
+- **Social Cliques & Rumor Decay:** community detection groups NPCs, while rumors decay in truth value as they propagate through the locations graph.
+- **Interactive Sandbox UI:** visual cytoscape.js map, command parser, detail logs, and save/load state functionality.
+
+Refer to the companion documentation inside the submodule for further details:
+- [GAME_GUIDE.md](file:///Users/subhajithait/Documents/testing/ai-forge-lab/world-simulator/docs/GAME_GUIDE.md): Guide on how to play, command lists, and UI controls.
+- [MANUAL.md](file:///Users/subhajithait/Documents/testing/ai-forge-lab/world-simulator/docs/MANUAL.md): Technical architecture, API reference, configuration settings, and database schema.
+- [future_notes.md](file:///Users/subhajithait/Documents/testing/ai-forge-lab/world-simulator/docs/future_notes.md): Future expansion roadmap including continent-scale grid, semantic vector memory, multi-agent conversation, and isometric WebGL rendering.
+
 ### 3. Explore Projects
 
 Each project resides in its own directory and has a specific `README.md` with installation and usage instructions.
@@ -128,6 +156,10 @@ Streamlining the path from raw data/ideas to polished media outputs like podcast
 ### 📚 Recursive Research & Long-Context Compliance
 
 Multi-agent pipelines designed to synthesize structured evidence from massive (1000+ page) corpora using iterative refinement, BM25 dependency resolution, and LangGraph-driven self-correction (see **Long-Context Compliance** and **RLM Research Agent**).
+
+### 🗺️ Generative World Simulations & RPGs
+
+Designing LLM-driven role-playing simulations where models act as structured intent parsers and planners, with episodic memory reflection, emergent trade economies, and rumor propagation (see [**RPG World Simulator**](file:///Users/subhajithait/Documents/testing/ai-forge-lab/world-simulator)).
 
 ---
 

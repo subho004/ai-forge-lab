@@ -49,3 +49,7 @@
 [submodule "rlm-test"]
 	path = rlm-test
 	url = https://github.com/subho004/bm25-rlm-agent
+[submodule "world-simulator"]
+	path = world-simulator
+	url = https://github.com/subho004/llm-rpg-world-simulator
+
