@@ -24,6 +24,8 @@ Welcome to the **AI Forge Lab**, a premier collection of cutting-edge AI researc
 | [**RPG World Simulator**](./world-simulator) | Interactive RPG sandbox with Gemini world transition engine, memory reflection, and emergent economy. | FastAPI, Gemini, NetworkX, Cytoscape.js |
 | [**MemGPT Git Agent**](./memgpt-test)        | Self-contained MemGPT agent with tiered memory (persona, human, document catalog, recall, archival) and versioned "memory git". | FastAPI, SQLite, NumPy, OpenAI, MarkItDown |
 | [**TurboQuant Personal AI**](./turboquant-test) | Folder-based personal AI assistant with perfect memory powered by TurboVec quantization and hybrid retrieval. | FastAPI, SQLite, TurboVec, FAISS, OpenAI |
+| [**Company Knowledge Builder**](./okf%2Bllm%20wiki) | Ingests heterogeneous files, analyzes dependencies, and builds an AI-queryable OKF wiki. | Python 3.14, FastAPI, Gemini 3, SQLite, sqlite-vec, NetworkX |
+| [**Omni-Agent**](./harness-ultimate)         | Agentic research harness executing parallel sub-agents with planning and self-correction. | Python 3.14, FastAPI, Gemini, SQLAlchemy, NetworkX, MarkItDown |
 
 ---
 
@@ -183,6 +185,57 @@ You can inspect the submodule contents in `turboquant-test` and follow its READM
 Refer to the companion documentation inside the submodule for further details:
 - [notes.md](file:///Users/subhajithait/Documents/testing/ai-forge-lab/turboquant-test/docs/notes.md): Engineering notes describing vector quantization theory, Google's TurboQuant algorithm, reciprocal rank fusion details, and implementation choices.
 
+### Company Knowledge Builder submodule
+
+This repository includes the Company Knowledge Builder as a git submodule. It's located at `okf+llm wiki` and sourced from https://github.com/subho004/okf-knowledge-graph-wiki.
+
+To initialize or update only this submodule after cloning:
+
+```bash
+git submodule update --init "okf+llm wiki"
+cd "okf+llm wiki"
+git pull origin main
+cd ..
+```
+
+You can inspect the submodule contents in `okf+llm wiki` and follow its README and docs folder for usage examples.
+
+#### Overview & Mechanics
+- **Universal Ingestion & Structure Analysis:** Heuristically analyzes project files (ZIP, PDF, DOCX, OpenAPI, SQL DDL) to build a typed NetworkX dependency graph.
+- **Concept Page Extraction:** Extracts and structures key concepts using Gemini into Open Knowledge Format (OKF) markdown pages.
+- **Auto Wiki-Linking:** Resolves relative links between concepts automatically, turning missing/dangling references into stub pages.
+- **Hybrid Search & SSE Streaming:** Integrates SQLite-based `sqlite-vec` semantic search and BM25 fused with RRF, streaming RAG chat and pipeline status over SSE.
+
+Refer to the companion documentation inside the submodule for further details:
+- [Company_Knowledge_Builder_OKF_Project_Idea.txt](file:///Users/subhajithait/Documents/testing/ai-forge-lab/okf+llm%20wiki/docs/Company_Knowledge_Builder_OKF_Project_Idea.txt): Project background, concept definitions, and core ideas behind OKF.
+- [implementation_plan.md](file:///Users/subhajithait/Documents/testing/ai-forge-lab/okf+llm%20wiki/docs/implementation_plan.md): Phased roadmap, database schema, data models, and detailed pipeline implementation plan.
+- [notes.md](file:///Users/subhajithait/Documents/testing/ai-forge-lab/okf+llm%20wiki/docs/notes.md): Reference design notes, NetworkX integration, SSE streaming implementation, and UI requirements.
+
+### Omni-Agent submodule
+
+This repository includes Omni-Agent as a git submodule. It's located at `harness-ultimate` and sourced from https://github.com/subho004/omni-agent.
+
+To initialize or update only this submodule after cloning:
+
+```bash
+git submodule update --init harness-ultimate
+cd harness-ultimate
+git pull origin main
+cd ..
+```
+
+You can inspect the submodule contents in `harness-ultimate` and follow its README and docs folder for usage examples.
+
+#### Overview & Agent Architecture
+- **Multi-Agent DAG Planning:** Uses a NetworkX directed acyclic graph to execute tasks in parallel via specialized sub-agents.
+- **Self-Correction & Evaluation:** Evaluates results, critiques performance, and dynamically reshapes/re-plans steps mid-flight.
+- **Recursive Sub-Agent Fan-Out:** Spawns nested sub-agents dynamically to delegate granular tasks in parallel.
+- **Grounding & Headless Browser Tools:** Features ~16 real-world tools, including Google Search grounding, browser-use/crawl4ai browser automation, sandbox command execution, and hybrid vector/BM25 retrieval.
+
+Refer to the companion documentation inside the submodule for further details:
+- [idea.md](file:///Users/subhajithait/Documents/testing/ai-forge-lab/harness-ultimate/docs/idea.md): Conceptual design, features description, and agent-loop flow diagrams.
+- [implementation-plan.md](file:///Users/subhajithait/Documents/testing/ai-forge-lab/harness-ultimate/docs/implementation-plan.md): Project roadmap, database models, tool list design, and step-by-step implementation phases.
+
 ### 3. Explore Projects
 
 Each project resides in its own directory and has a specific `README.md` with installation and usage instructions.
@@ -201,7 +254,7 @@ Reference guide for advanced alignment strategies including Supervised Fine-Tuni
 
 ### 🕸️ Graph-Based Reasoning
 
-Moving beyond flat vector embeddings toward structured wisdom using Knowledge Graphs for more accurate and traceable RAG (see **Graph LLMs**).
+Moving beyond flat vector embeddings toward structured wisdom using Knowledge Graphs for more accurate and traceable RAG (see **Graph LLMs** and [**Company Knowledge Builder**](file:///Users/subhajithait/Documents/testing/ai-forge-lab/okf+llm%20wiki)).
 
 ### 🎙️ AI Content Pipelines
 
@@ -222,6 +275,10 @@ Exploring LLMs as operating systems by implementing tiered memory hierarchies (m
 ### ⚡ High-Efficiency Vector Quantization & Semantic Search
 
 Investigating ultra-low-bit vector quantization methods like Google Research's TurboQuant (compressing 1536-dimensional embeddings to 2-4 bits without training or codebooks) and comparing SIMD-accelerated Rust flat indexes against industry standards like FAISS under real-world document search workloads (see [**TurboQuant Personal AI**](file:///Users/subhajithait/Documents/testing/ai-forge-lab/turboquant-test)).
+
+### 🤖 Multi-Agent Planning & Self-Correction
+
+Decomposing complex queries into parallelized DAG-based execution plans, incorporating self-reflection loops, and utilizing browser automation, sandboxed runtimes, and hybrid retrieval tools to autonomously solve tasks (see [**Omni-Agent**](file:///Users/subhajithait/Documents/testing/ai-forge-lab/harness-ultimate)).
 
 ---
 

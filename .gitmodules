@@ -59,3 +59,9 @@
 [submodule "turboquant-test"]
 	path = turboquant-test
 	url = https://github.com/subho004/turboquant-personal-ai
+[submodule "okf+llm wiki"]
+	path = okf+llm wiki
+	url = https://github.com/subho004/okf-knowledge-graph-wiki
+[submodule "harness-ultimate"]
+	path = harness-ultimate
+	url = https://github.com/subho004/omni-agent
