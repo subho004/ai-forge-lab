@@ -7,7 +7,7 @@
 **A monorepo of cutting-edge AI research, autonomous agents, and experimental LLM demos.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![Projects](https://img.shields.io/badge/projects-16-blue.svg)](#-featured-projects)
+[![Projects](https://img.shields.io/badge/projects-18-blue.svg)](#-featured-projects)
 [![Git Submodules](https://img.shields.io/badge/git-submodules-orange.svg)](#%EF%B8%8F-getting-started)
 [![Python](https://img.shields.io/badge/python-3.10%2B-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-009688.svg?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
@@ -53,6 +53,8 @@ Project names below match their upstream GitHub repository names. Click any proj
 | [`turboquant-personal-ai`](https://github.com/subho004/turboquant-personal-ai) | Folder-based personal AI with perfect memory via TurboVec quantization and hybrid retrieval. | FastAPI, SQLite, TurboVec, FAISS, OpenAI |
 | [`okf-knowledge-graph-wiki`](https://github.com/subho004/okf-knowledge-graph-wiki) | Ingests heterogeneous files, analyzes dependencies, and builds an AI-queryable OKF wiki. | Python 3.14, FastAPI, Gemini 3, SQLite, sqlite-vec, NetworkX |
 | [`omni-agent`](https://github.com/subho004/omni-agent) | Agentic research harness executing parallel sub-agents with planning and self-correction. | Python 3.14, FastAPI, Gemini, SQLAlchemy, NetworkX, MarkItDown |
+| [`llm-distillation-guide`](https://github.com/subho004/llm-distillation-guide) | A hands-on guide to LLM knowledge distillation: using Llama-3 (via Groq) to label synthetic data and fine-tuning a 1000x smaller RoBERTa student. | Llama-3, Groq, RoBERTa, PyTorch, Hugging Face |
+| [`rlm-due-diligence-agents`](https://github.com/subho004/rlm-due-diligence-agents) | Autonomous investment analyst leveraging LangChain Deep Agents & RLM-style dynamic workflows to run end-to-end technical, market, and financial due diligence with human-in-the-loop validation. | LangChain, Deep Agents, RLM, Python |
 
 > **Local paths:** each repo is mounted in this monorepo at a submodule path. See the mapping in [Working with Individual Submodules](#-working-with-individual-submodules).
 
@@ -103,6 +105,8 @@ Each project's **display name = its GitHub repo name**. The table below maps tha
 | `turboquant-personal-ai` | https://github.com/subho004/turboquant-personal-ai | `turboquant-test` |
 | `okf-knowledge-graph-wiki` | https://github.com/subho004/okf-knowledge-graph-wiki | `okf+llm wiki` |
 | `omni-agent` | https://github.com/subho004/omni-agent | `harness-ultimate` |
+| `llm-distillation-guide` | https://github.com/subho004/llm-distillation-guide | `LLM-distillation-guide` |
+| `rlm-due-diligence-agents` | https://github.com/subho004/rlm-due-diligence-agents | `deep-agents-due-diligence` |
 
 To initialize or update a single submodule after cloning:
 
@@ -277,6 +281,22 @@ Agentic research harness executing parallel sub-agents with planning and self-co
 Companion docs: `docs/idea.md`, `docs/implementation-plan.md`.
 </details>
 
+<details>
+<summary><b>llm-distillation-guide</b> — LLM knowledge distillation (<code>LLM-distillation-guide</code>)</summary>
+
+Hands-on guide to LLM knowledge distillation: using Llama-3 (via Groq) to label synthetic data and fine-tuning a 1000x smaller RoBERTa student.
+
+**Key tech:** Llama-3, Groq, RoBERTa, PyTorch, Hugging Face.
+</details>
+
+<details>
+<summary><b>rlm-due-diligence-agents</b> — Autonomous due diligence (<code>deep-agents-due-diligence</code>)</summary>
+
+Autonomous investment analyst leveraging LangChain Deep Agents & RLM-style dynamic workflows to run end-to-end technical, market, and financial due diligence with human-in-the-loop validation.
+
+**Key tech:** LangChain, Deep Agents, RLM, Python.
+</details>
+
 ---
 
 ## 🧪 Research Themes
@@ -284,8 +304,8 @@ Companion docs: `docs/idea.md`, `docs/implementation-plan.md`.
 ### 🧠 Autonomous Evolution
 LLMs iteratively improving their own logic and tools through self-correction and performance-based evolution — see [`openevolve-guide`](https://github.com/subho004/openevolve-guide).
 
-### 📖 Model Fine-Tuning & Alignment
-Advanced alignment strategies including SFT, LoRA/QLoRA, and preference optimization (DPO) — see [`finetuning-guide`](https://github.com/subho004/finetuning-guide).
+### 📖 Model Fine-Tuning, Alignment & Distillation
+Advanced alignment strategies including SFT, LoRA/QLoRA, preference optimization (DPO), and knowledge distillation to smaller student models — see [`finetuning-guide`](https://github.com/subho004/finetuning-guide) and [`llm-distillation-guide`](https://github.com/subho004/llm-distillation-guide).
 
 ### 🕸️ Graph-Based Reasoning
 Moving beyond flat vector embeddings toward structured knowledge graphs for accurate, traceable RAG — see [`graph-llms`](https://github.com/subho004/graph-llms) and [`okf-knowledge-graph-wiki`](https://github.com/subho004/okf-knowledge-graph-wiki).
@@ -306,7 +326,7 @@ LLMs as operating systems: tiered memory hierarchies (RAM vs. disk), tool-driven
 Ultra-low-bit quantization à la Google Research's TurboQuant (1536-dim → 2–4 bits, no training/codebooks) benchmarked against FAISS — see [`turboquant-personal-ai`](https://github.com/subho004/turboquant-personal-ai).
 
 ### 🤖 Multi-Agent Planning & Self-Correction
-Decomposing complex queries into parallelized DAG execution plans with self-reflection loops, browser automation, sandboxed runtimes, and hybrid retrieval — see [`omni-agent`](https://github.com/subho004/omni-agent).
+Decomposing complex queries into parallelized DAG execution plans or dynamic workflows with self-reflection, browser automation, sandboxed runtimes, hybrid retrieval, and human-in-the-loop verification — see [`omni-agent`](https://github.com/subho004/omni-agent) and [`rlm-due-diligence-agents`](https://github.com/subho004/rlm-due-diligence-agents).
 
 ---
 

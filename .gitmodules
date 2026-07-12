@@ -65,3 +65,9 @@
 [submodule "harness-ultimate"]
 	path = harness-ultimate
 	url = https://github.com/subho004/omni-agent
+[submodule "LLM-distillation-guide"]
+	path = LLM-distillation-guide
+	url = https://github.com/subho004/llm-distillation-guide
+[submodule "deep-agents-due-diligence"]
+	path = deep-agents-due-diligence
+	url = https://github.com/subho004/rlm-due-diligence-agents
