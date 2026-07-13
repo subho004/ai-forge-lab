@@ -71,3 +71,6 @@
 [submodule "deep-agents-due-diligence"]
 	path = deep-agents-due-diligence
 	url = https://github.com/subho004/rlm-due-diligence-agents
+[submodule "agentic-video-generator"]
+	path = agentic-video-generator
+	url = https://github.com/subho004/omni-video-agent

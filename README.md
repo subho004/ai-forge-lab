@@ -7,7 +7,7 @@
 **A monorepo of cutting-edge AI research, autonomous agents, and experimental LLM demos.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![Projects](https://img.shields.io/badge/projects-18-blue.svg)](#-featured-projects)
+[![Projects](https://img.shields.io/badge/projects-19-blue.svg)](#-featured-projects)
 [![Git Submodules](https://img.shields.io/badge/git-submodules-orange.svg)](#%EF%B8%8F-getting-started)
 [![Python](https://img.shields.io/badge/python-3.10%2B-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-009688.svg?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
@@ -55,6 +55,7 @@ Project names below match their upstream GitHub repository names. Click any proj
 | [`omni-agent`](https://github.com/subho004/omni-agent) | Agentic research harness executing parallel sub-agents with planning and self-correction. | Python 3.14, FastAPI, Gemini, SQLAlchemy, NetworkX, MarkItDown |
 | [`llm-distillation-guide`](https://github.com/subho004/llm-distillation-guide) | A hands-on guide to LLM knowledge distillation: using Llama-3 (via Groq) to label synthetic data and fine-tuning a 1000x smaller RoBERTa student. | Llama-3, Groq, RoBERTa, PyTorch, Hugging Face |
 | [`rlm-due-diligence-agents`](https://github.com/subho004/rlm-due-diligence-agents) | Autonomous investment analyst leveraging LangChain Deep Agents & RLM-style dynamic workflows to run end-to-end technical, market, and financial due diligence with human-in-the-loop validation. | LangChain, Deep Agents, RLM, Python |
+| [`omni-video-agent`](https://github.com/subho004/omni-video-agent) | End-to-end automated video generation: researches the web, writes a storyboard, generates clips (Veo 3.1) and music (Lyria 3), and compiles the final video. | LangChain Deep Agents, Gemini (Veo 3.1, Lyria 3, Nano Banana 2), crawl4ai, MarkItDown, FastAPI, SQLite, ffmpeg |
 
 > **Local paths:** each repo is mounted in this monorepo at a submodule path. See the mapping in [Working with Individual Submodules](#-working-with-individual-submodules).
 
@@ -107,6 +108,7 @@ Each project's **display name = its GitHub repo name**. The table below maps tha
 | `omni-agent` | https://github.com/subho004/omni-agent | `harness-ultimate` |
 | `llm-distillation-guide` | https://github.com/subho004/llm-distillation-guide | `LLM-distillation-guide` |
 | `rlm-due-diligence-agents` | https://github.com/subho004/rlm-due-diligence-agents | `deep-agents-due-diligence` |
+| `omni-video-agent` | https://github.com/subho004/omni-video-agent | `agentic-video-generator` |
 
 To initialize or update a single submodule after cloning:
 
@@ -297,6 +299,19 @@ Autonomous investment analyst leveraging LangChain Deep Agents & RLM-style dynam
 **Key tech:** LangChain, Deep Agents, RLM, Python.
 </details>
 
+<details>
+<summary><b>omni-video-agent</b> — Automated video generation (<code>agentic-video-generator</code>)</summary>
+
+End-to-end automated video generation from a single query: researches the web, storyboards scenes, generates video clips and music, and compiles the final video.
+
+- **Web Research & Synthesis:** uses LangChain Deep Agents with crawl4ai (scraping) and MarkItDown (document parsing) to research a topic and build a structured knowledge wiki.
+- **Storyboard Generation:** uses Gemini structured output to translate the research wiki into a shot-by-shot storyboard with Veo prompts, Lyria music briefs, and thumbnail prompts.
+- **Media Generation & Continuity:** generates 30–60s video clips via Veo 3.1 (with native audio/dialogue and scene extensions) and composes a custom background music bed via Lyria 3.
+- **Assembly & UI:** mixes and compiles video clips, narration, and background music using ffmpeg into a final `.mp4` and creates a poster thumbnail with Nano Banana 2, served via a vanilla HTML/CSS/JS frontend.
+
+Companion docs: `docs/implementation-plan.md`.
+</details>
+
 ---
 
 ## 🧪 Research Themes
@@ -311,7 +326,7 @@ Advanced alignment strategies including SFT, LoRA/QLoRA, preference optimization
 Moving beyond flat vector embeddings toward structured knowledge graphs for accurate, traceable RAG — see [`graph-llms`](https://github.com/subho004/graph-llms) and [`okf-knowledge-graph-wiki`](https://github.com/subho004/okf-knowledge-graph-wiki).
 
 ### 🎙️ AI Content Pipelines
-Streamlining the path from raw ideas to polished media like podcasts — see [`podcast-automate`](https://github.com/subho004/podcast-automate).
+Streamlining the path from raw ideas to polished media like podcasts and videos — see [`podcast-automate`](https://github.com/subho004/podcast-automate) and [`omni-video-agent`](https://github.com/subho004/omni-video-agent).
 
 ### 📚 Recursive Research & Long-Context Compliance
 Multi-agent pipelines synthesizing structured evidence from massive (1000+ page) corpora via iterative refinement, BM25 dependency resolution, and LangGraph self-correction — see [`agentic-deep-reader`](https://github.com/subho004/agentic-deep-reader) and [`bm25-rlm-agent`](https://github.com/subho004/bm25-rlm-agent).
