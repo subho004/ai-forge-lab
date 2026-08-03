@@ -7,7 +7,7 @@
 **A monorepo of cutting-edge AI research, autonomous agents, and experimental LLM demos.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![Projects](https://img.shields.io/badge/projects-19-blue.svg)](#-featured-projects)
+[![Projects](https://img.shields.io/badge/projects-20-blue.svg)](#-featured-projects)
 [![Git Submodules](https://img.shields.io/badge/git-submodules-orange.svg)](#%EF%B8%8F-getting-started)
 [![Python](https://img.shields.io/badge/python-3.10%2B-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-009688.svg?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
@@ -35,27 +35,28 @@ Welcome to the **AI Forge Lab** — a centralized hub for projects exploring the
 
 Project names below match their upstream GitHub repository names. Click any project to open its dedicated repo.
 
-| Project | Description | Key Tech |
-| :------ | :---------- | :------- |
-| [`openevolve-guide`](https://github.com/subho004/openevolve-guide) | Framework for building self-evolving AI agents that improve their own code. | Python, LLMs, Process Isolation |
-| [`auto-research-guide`](https://github.com/subho004/auto-research-guide) | Automated technical and scientific research workflows powered by AI. | LangChain, Research APIs |
-| [`finetuning-guide`](https://github.com/subho004/finetuning-guide) | Comprehensive reference for fine-tuning LLMs (LoRA, QLoRA, DPO, RLHF). | PEFT, bitsandbytes, TRL |
-| [`mcp-chatbot`](https://github.com/subho004/mcp-chatbot) | A modular chatbot implementation using the Model Context Protocol (MCP). | LangChain, MCP, Groq |
-| [`podcast-automate`](https://github.com/subho004/podcast-automate) | End-to-end automation for podcast production, from script to speech. | Maya1, TTS, LLMs |
-| [`a2a-guide`](https://github.com/subho004/a2a-guide) | Action-to-Action guide: practical patterns for chaining agent actions. | Examples, Guides |
-| [`vectorless-llm-evals`](https://github.com/subho004/vectorless-llm-evals) | Evaluating RAG systems using PageIndex for hierarchical, vectorless retrieval. | PageIndex, LangSmith |
-| [`graph-llms`](https://github.com/subho004/graph-llms) | Integrating Knowledge Graphs (Neo4j) with LLM reasoning for complex queries. | Neo4j, Cypher, Groq |
-| [`attention-to-gpt-scratch`](https://github.com/subho004/attention-to-gpt-scratch) | Build, deconstruct, and train decoder-only Generative Pre-trained Transformers. | PyTorch, tiktoken, GPT-2 |
-| [`agentic-deep-reader`](https://github.com/subho004/agentic-deep-reader) | Multi-agent, multi-pass pipeline for extracting compliance evidence from long PDFs. | FastAPI, Groq, Datalab OCR, BM25 |
-| [`bm25-rlm-agent`](https://github.com/subho004/bm25-rlm-agent) | In-memory deep-research agent over a local markdown corpus using recursive decomposition. | FastAPI, LangChain, LangGraph, OpenAI |
-| [`llm-rpg-world-simulator`](https://github.com/subho004/llm-rpg-world-simulator) | Interactive RPG sandbox with Gemini world-transition engine, memory reflection, and emergent economy. | FastAPI, Gemini, NetworkX, Cytoscape.js |
-| [`mem-git-agent`](https://github.com/subho004/mem-git-agent) | Self-contained MemGPT agent with tiered memory and versioned "memory git". | FastAPI, SQLite, NumPy, OpenAI, MarkItDown |
-| [`turboquant-personal-ai`](https://github.com/subho004/turboquant-personal-ai) | Folder-based personal AI with perfect memory via TurboVec quantization and hybrid retrieval. | FastAPI, SQLite, TurboVec, FAISS, OpenAI |
-| [`okf-knowledge-graph-wiki`](https://github.com/subho004/okf-knowledge-graph-wiki) | Ingests heterogeneous files, analyzes dependencies, and builds an AI-queryable OKF wiki. | Python 3.14, FastAPI, Gemini 3, SQLite, sqlite-vec, NetworkX |
-| [`omni-agent`](https://github.com/subho004/omni-agent) | Agentic research harness executing parallel sub-agents with planning and self-correction. | Python 3.14, FastAPI, Gemini, SQLAlchemy, NetworkX, MarkItDown |
-| [`llm-distillation-guide`](https://github.com/subho004/llm-distillation-guide) | A hands-on guide to LLM knowledge distillation: using Llama-3 (via Groq) to label synthetic data and fine-tuning a 1000x smaller RoBERTa student. | Llama-3, Groq, RoBERTa, PyTorch, Hugging Face |
-| [`rlm-due-diligence-agents`](https://github.com/subho004/rlm-due-diligence-agents) | Autonomous investment analyst leveraging LangChain Deep Agents & RLM-style dynamic workflows to run end-to-end technical, market, and financial due diligence with human-in-the-loop validation. | LangChain, Deep Agents, RLM, Python |
-| [`omni-video-agent`](https://github.com/subho004/omni-video-agent) | End-to-end automated video generation: researches the web, writes a storyboard, generates clips (Veo 3.1) and music (Lyria 3), and compiles the final video. | LangChain Deep Agents, Gemini (Veo 3.1, Lyria 3, Nano Banana 2), crawl4ai, MarkItDown, FastAPI, SQLite, ffmpeg |
+| Project                                                                            | Description                                                                                                                                                                                      | Key Tech                                                                                                       |
+| :--------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------- |
+| [`openevolve-guide`](https://github.com/subho004/openevolve-guide)                 | Framework for building self-evolving AI agents that improve their own code.                                                                                                                      | Python, LLMs, Process Isolation                                                                                |
+| [`auto-research-guide`](https://github.com/subho004/auto-research-guide)           | Automated technical and scientific research workflows powered by AI.                                                                                                                             | LangChain, Research APIs                                                                                       |
+| [`finetuning-guide`](https://github.com/subho004/finetuning-guide)                 | Comprehensive reference for fine-tuning LLMs (LoRA, QLoRA, DPO, RLHF).                                                                                                                           | PEFT, bitsandbytes, TRL                                                                                        |
+| [`mcp-chatbot`](https://github.com/subho004/mcp-chatbot)                           | A modular chatbot implementation using the Model Context Protocol (MCP).                                                                                                                         | LangChain, MCP, Groq                                                                                           |
+| [`podcast-automate`](https://github.com/subho004/podcast-automate)                 | End-to-end automation for podcast production, from script to speech.                                                                                                                             | Maya1, TTS, LLMs                                                                                               |
+| [`a2a-guide`](https://github.com/subho004/a2a-guide)                               | Action-to-Action guide: practical patterns for chaining agent actions.                                                                                                                           | Examples, Guides                                                                                               |
+| [`vectorless-llm-evals`](https://github.com/subho004/vectorless-llm-evals)         | Evaluating RAG systems using PageIndex for hierarchical, vectorless retrieval.                                                                                                                   | PageIndex, LangSmith                                                                                           |
+| [`graph-llms`](https://github.com/subho004/graph-llms)                             | Integrating Knowledge Graphs (Neo4j) with LLM reasoning for complex queries.                                                                                                                     | Neo4j, Cypher, Groq                                                                                            |
+| [`attention-to-gpt-scratch`](https://github.com/subho004/attention-to-gpt-scratch) | Build, deconstruct, and train decoder-only Generative Pre-trained Transformers.                                                                                                                  | PyTorch, tiktoken, GPT-2                                                                                       |
+| [`agentic-deep-reader`](https://github.com/subho004/agentic-deep-reader)           | Multi-agent, multi-pass pipeline for extracting compliance evidence from long PDFs.                                                                                                              | FastAPI, Groq, Datalab OCR, BM25                                                                               |
+| [`bm25-rlm-agent`](https://github.com/subho004/bm25-rlm-agent)                     | In-memory deep-research agent over a local markdown corpus using recursive decomposition.                                                                                                        | FastAPI, LangChain, LangGraph, OpenAI                                                                          |
+| [`llm-rpg-world-simulator`](https://github.com/subho004/llm-rpg-world-simulator)   | Interactive RPG sandbox with Gemini world-transition engine, memory reflection, and emergent economy.                                                                                            | FastAPI, Gemini, NetworkX, Cytoscape.js                                                                        |
+| [`mem-git-agent`](https://github.com/subho004/mem-git-agent)                       | Self-contained MemGPT agent with tiered memory and versioned "memory git".                                                                                                                       | FastAPI, SQLite, NumPy, OpenAI, MarkItDown                                                                     |
+| [`turboquant-personal-ai`](https://github.com/subho004/turboquant-personal-ai)     | Folder-based personal AI with perfect memory via TurboVec quantization and hybrid retrieval.                                                                                                     | FastAPI, SQLite, TurboVec, FAISS, OpenAI                                                                       |
+| [`okf-knowledge-graph-wiki`](https://github.com/subho004/okf-knowledge-graph-wiki) | Ingests heterogeneous files, analyzes dependencies, and builds an AI-queryable OKF wiki.                                                                                                         | Python 3.14, FastAPI, Gemini 3, SQLite, sqlite-vec, NetworkX                                                   |
+| [`omni-agent`](https://github.com/subho004/omni-agent)                             | Agentic research harness executing parallel sub-agents with planning and self-correction.                                                                                                        | Python 3.14, FastAPI, Gemini, SQLAlchemy, NetworkX, MarkItDown                                                 |
+| [`llm-distillation-guide`](https://github.com/subho004/llm-distillation-guide)     | A hands-on guide to LLM knowledge distillation: using Llama-3 (via Groq) to label synthetic data and fine-tuning a 1000x smaller RoBERTa student.                                                | Llama-3, Groq, RoBERTa, PyTorch, Hugging Face                                                                  |
+| [`rlm-due-diligence-agents`](https://github.com/subho004/rlm-due-diligence-agents) | Autonomous investment analyst leveraging LangChain Deep Agents & RLM-style dynamic workflows to run end-to-end technical, market, and financial due diligence with human-in-the-loop validation. | LangChain, Deep Agents, RLM, Python                                                                            |
+| [`omni-video-agent`](https://github.com/subho004/omni-video-agent)                 | End-to-end automated video generation: researches the web, writes a storyboard, generates clips (Veo 3.1) and music (Lyria 3), and compiles the final video.                                     | LangChain Deep Agents, Gemini (Veo 3.1, Lyria 3, Nano Banana 2), crawl4ai, MarkItDown, FastAPI, SQLite, ffmpeg |
+| [`multidoc-agent-java`](https://github.com/subho004/multidoc-agent-java)           | Claude-Code-style multi-doc Q&A agent: planner + recursive research sub-agents over hybrid dense + BM25 + knowledge-graph retrieval, with cited answers.                                         | Java 25, LangChain4j, Gemini, Javalin, SQLite, Lucene, MarkItDown                                              |
 
 > **Local paths:** each repo is mounted in this monorepo at a submodule path. See the mapping in [Working with Individual Submodules](#-working-with-individual-submodules).
 
@@ -88,27 +89,28 @@ Each project resides in its own directory and has a dedicated `README.md` with i
 
 Each project's **display name = its GitHub repo name**. The table below maps that repo (and URL) to the local submodule path inside this monorepo.
 
-| GitHub Repository | URL | Local Path |
-| :---------------- | :-- | :--------- |
-| `openevolve-guide` | https://github.com/subho004/openevolve-guide | `openevolve-guide` |
-| `auto-research-guide` | https://github.com/subho004/auto-research-guide | `auto-research-guide` |
-| `finetuning-guide` | https://github.com/subho004/finetuning-guide | `finetuning-guide` |
-| `mcp-chatbot` | https://github.com/subho004/mcp-chatbot | `mcp-chatbot` |
-| `podcast-automate` | https://github.com/subho004/podcast-automate | `podcast-automate` |
-| `a2a-guide` | https://github.com/subho004/a2a-guide | `a2a-guide` |
-| `vectorless-llm-evals` | https://github.com/subho004/vectorless-llm-evals | `vectorless-llm-evals` |
-| `graph-llms` | https://github.com/subho004/graph-llms | `graph-llms` |
-| `attention-to-gpt-scratch` | https://github.com/subho004/attention-to-gpt-scratch | `gpt-scratch` |
-| `agentic-deep-reader` | https://github.com/subho004/agentic-deep-reader | `long-document-context` |
-| `bm25-rlm-agent` | https://github.com/subho004/bm25-rlm-agent | `rlm-test` |
-| `llm-rpg-world-simulator` | https://github.com/subho004/llm-rpg-world-simulator | `world-simulator` |
-| `mem-git-agent` | https://github.com/subho004/mem-git-agent | `memgpt-test` |
-| `turboquant-personal-ai` | https://github.com/subho004/turboquant-personal-ai | `turboquant-test` |
-| `okf-knowledge-graph-wiki` | https://github.com/subho004/okf-knowledge-graph-wiki | `okf+llm wiki` |
-| `omni-agent` | https://github.com/subho004/omni-agent | `harness-ultimate` |
-| `llm-distillation-guide` | https://github.com/subho004/llm-distillation-guide | `LLM-distillation-guide` |
+| GitHub Repository          | URL                                                  | Local Path                  |
+| :------------------------- | :--------------------------------------------------- | :-------------------------- |
+| `openevolve-guide`         | https://github.com/subho004/openevolve-guide         | `openevolve-guide`          |
+| `auto-research-guide`      | https://github.com/subho004/auto-research-guide      | `auto-research-guide`       |
+| `finetuning-guide`         | https://github.com/subho004/finetuning-guide         | `finetuning-guide`          |
+| `mcp-chatbot`              | https://github.com/subho004/mcp-chatbot              | `mcp-chatbot`               |
+| `podcast-automate`         | https://github.com/subho004/podcast-automate         | `podcast-automate`          |
+| `a2a-guide`                | https://github.com/subho004/a2a-guide                | `a2a-guide`                 |
+| `vectorless-llm-evals`     | https://github.com/subho004/vectorless-llm-evals     | `vectorless-llm-evals`      |
+| `graph-llms`               | https://github.com/subho004/graph-llms               | `graph-llms`                |
+| `attention-to-gpt-scratch` | https://github.com/subho004/attention-to-gpt-scratch | `gpt-scratch`               |
+| `agentic-deep-reader`      | https://github.com/subho004/agentic-deep-reader      | `long-document-context`     |
+| `bm25-rlm-agent`           | https://github.com/subho004/bm25-rlm-agent           | `rlm-test`                  |
+| `llm-rpg-world-simulator`  | https://github.com/subho004/llm-rpg-world-simulator  | `world-simulator`           |
+| `mem-git-agent`            | https://github.com/subho004/mem-git-agent            | `memgpt-test`               |
+| `turboquant-personal-ai`   | https://github.com/subho004/turboquant-personal-ai   | `turboquant-test`           |
+| `okf-knowledge-graph-wiki` | https://github.com/subho004/okf-knowledge-graph-wiki | `okf+llm wiki`              |
+| `omni-agent`               | https://github.com/subho004/omni-agent               | `harness-ultimate`          |
+| `llm-distillation-guide`   | https://github.com/subho004/llm-distillation-guide   | `LLM-distillation-guide`    |
 | `rlm-due-diligence-agents` | https://github.com/subho004/rlm-due-diligence-agents | `deep-agents-due-diligence` |
-| `omni-video-agent` | https://github.com/subho004/omni-video-agent | `agentic-video-generator` |
+| `omni-video-agent`         | https://github.com/subho004/omni-video-agent         | `agentic-video-generator`   |
+| `multidoc-agent-java`      | https://github.com/subho004/multidoc-agent-java      | `langchain4j-test`          |
 
 To initialize or update a single submodule after cloning:
 
@@ -131,6 +133,7 @@ cd ..
 Framework for building self-evolving AI agents that improve their own code.
 
 **Key tech:** Python, LLMs, Process Isolation.
+
 </details>
 
 <details>
@@ -139,6 +142,7 @@ Framework for building self-evolving AI agents that improve their own code.
 Automated technical and scientific research workflows powered by AI.
 
 **Key tech:** LangChain, Research APIs.
+
 </details>
 
 <details>
@@ -147,6 +151,7 @@ Automated technical and scientific research workflows powered by AI.
 Comprehensive reference for fine-tuning LLMs (LoRA, QLoRA, DPO, RLHF).
 
 **Key tech:** PEFT, bitsandbytes, TRL.
+
 </details>
 
 <details>
@@ -155,6 +160,7 @@ Comprehensive reference for fine-tuning LLMs (LoRA, QLoRA, DPO, RLHF).
 A modular chatbot implementation using the Model Context Protocol (MCP).
 
 **Key tech:** LangChain, MCP, Groq.
+
 </details>
 
 <details>
@@ -163,6 +169,7 @@ A modular chatbot implementation using the Model Context Protocol (MCP).
 End-to-end automation for podcast production, from script to speech.
 
 **Key tech:** Maya1, TTS, LLMs.
+
 </details>
 
 <details>
@@ -171,6 +178,7 @@ End-to-end automation for podcast production, from script to speech.
 Action-to-Action guide: practical examples and patterns for chaining agent actions.
 
 **Key tech:** Examples, Guides.
+
 </details>
 
 <details>
@@ -179,6 +187,7 @@ Action-to-Action guide: practical examples and patterns for chaining agent actio
 Evaluating RAG systems using PageIndex for hierarchical, vectorless retrieval.
 
 **Key tech:** PageIndex, LangSmith.
+
 </details>
 
 <details>
@@ -187,6 +196,7 @@ Evaluating RAG systems using PageIndex for hierarchical, vectorless retrieval.
 Integrating Knowledge Graphs (Neo4j) with LLM reasoning for complex queries.
 
 **Key tech:** Neo4j, Cypher, Groq.
+
 </details>
 
 <details>
@@ -195,6 +205,7 @@ Integrating Knowledge Graphs (Neo4j) with LLM reasoning for complex queries.
 Build, deconstruct, and train decoder-only Generative Pre-trained Transformers.
 
 **Key tech:** PyTorch, tiktoken, GPT-2.
+
 </details>
 
 <details>
@@ -203,6 +214,7 @@ Build, deconstruct, and train decoder-only Generative Pre-trained Transformers.
 Multi-agent, multi-pass pipeline for extracting and synthesizing compliance evidence from long PDFs.
 
 **Key tech:** FastAPI, Groq, Datalab OCR, BM25.
+
 </details>
 
 <details>
@@ -211,13 +223,13 @@ Multi-agent, multi-pass pipeline for extracting and synthesizing compliance evid
 In-memory deep-research agent over a local markdown corpus using recursive decomposition.
 
 **Key tech:** FastAPI, LangChain, LangGraph, OpenAI.
+
 </details>
 
 <details>
 <summary><b>llm-rpg-world-simulator</b> — Generative RPG sandbox (<code>world-simulator</code>)</summary>
 
 Interactive RPG sandbox with Gemini world-transition engine, memory reflection, and emergent economy.
-
 
 - **World Transition Engine:** LLM parses player intent and NPC actions to output structured state diffs, processed via a validation choke point (`DiffApplier`).
 - **Emergent Quests:** short supply triggers fetch quests; completing them pays rewards, resolves shortages, and spawns rumors.
@@ -226,6 +238,7 @@ Interactive RPG sandbox with Gemini world-transition engine, memory reflection, 
 - **Interactive Sandbox UI:** visual Cytoscape.js map, command parser, detail logs, and save/load state.
 
 Companion docs inside the submodule: `docs/GAME_GUIDE.md`, `docs/MANUAL.md`, `docs/future_notes.md`.
+
 </details>
 
 <details>
@@ -241,6 +254,7 @@ Self-contained MemGPT agent with tiered memory (persona, human, document catalog
 - **Hybrid Retrieval & Reranking:** in-process NumPy similarity search fused with SQLite FTS5 BM25, then a cheap LLM rerank.
 
 Companion docs: `docs/notes.md`.
+
 </details>
 
 <details>
@@ -255,6 +269,7 @@ Folder-based personal AI assistant with perfect memory powered by TurboVec quant
 - **Cost & Token Tracker** and **Benchmark Dashboard** (TurboVec vs. FAISS IndexPQ/IndexFlat).
 
 Companion docs: `docs/notes.md`.
+
 </details>
 
 <details>
@@ -268,6 +283,7 @@ Ingests heterogeneous files, analyzes dependencies, and builds an AI-queryable O
 - **Hybrid Search & SSE Streaming:** `sqlite-vec` semantic search + BM25 fused with RRF, streaming RAG chat and pipeline status over SSE.
 
 Companion docs: `docs/Company_Knowledge_Builder_OKF_Project_Idea.txt`, `docs/implementation_plan.md`, `docs/notes.md`.
+
 </details>
 
 <details>
@@ -281,6 +297,7 @@ Agentic research harness executing parallel sub-agents with planning and self-co
 - **Grounding & Headless Browser Tools:** ~16 real-world tools — Google Search grounding, browser-use/crawl4ai automation, sandboxed command execution, hybrid vector/BM25 retrieval.
 
 Companion docs: `docs/idea.md`, `docs/implementation-plan.md`.
+
 </details>
 
 <details>
@@ -289,6 +306,7 @@ Companion docs: `docs/idea.md`, `docs/implementation-plan.md`.
 Hands-on guide to LLM knowledge distillation: using Llama-3 (via Groq) to label synthetic data and fine-tuning a 1000x smaller RoBERTa student.
 
 **Key tech:** Llama-3, Groq, RoBERTa, PyTorch, Hugging Face.
+
 </details>
 
 <details>
@@ -297,6 +315,7 @@ Hands-on guide to LLM knowledge distillation: using Llama-3 (via Groq) to label 
 Autonomous investment analyst leveraging LangChain Deep Agents & RLM-style dynamic workflows to run end-to-end technical, market, and financial due diligence with human-in-the-loop validation.
 
 **Key tech:** LangChain, Deep Agents, RLM, Python.
+
 </details>
 
 <details>
@@ -310,6 +329,21 @@ End-to-end automated video generation from a single query: researches the web, s
 - **Assembly & UI:** mixes and compiles video clips, narration, and background music using ffmpeg into a final `.mp4` and creates a poster thumbnail with Nano Banana 2, served via a vanilla HTML/CSS/JS frontend.
 
 Companion docs: `docs/implementation-plan.md`.
+
+</details>
+
+<details>
+<summary><b>multidoc-agent-java</b> — Agentic multi-doc Q&amp;A (<code>langchain4j-test</code>)</summary>
+
+Claude-Code-style planning agent over a pile of documents: decides what to search, spawns recursive research sub-agents, and answers with citations — hybrid dense + BM25 + knowledge-graph retrieval, single JVM, no Postgres/vector DB/Docker.
+
+- **Hybrid Retrieval Stack:** Gemini dense embeddings + Apache Lucene BM25 + n-hop knowledge-graph expansion, fused with RRF and LLM reranking; adapts fusion weights by query type (exact-figure vs open-ended).
+- **Planner + Sub-Agents + Critic:** Claude-Code-style plan → tool call → observe → revise loop; recursive `spawnResearchSubAgent`, a critic that gates sufficiency, and an answer composer that cites every claim to a real chunk id.
+- **Contextual Ingestion:** MarkItDown sidecar parses PDF/Office/HTML/images; structure-aware chunking with Anthropic-style contextual enrichment before embedding; entity graph extracted per chunk into SQLite.
+- **Single-Binary Deploy:** Java 25 + LangChain4j + Javalin — one `java -jar`, one `GEMINI_API_KEY`, conversations and SSE agent traces in a no-build-step browser UI.
+
+Companion docs: `docs/PLAN.md`, `docs/ARCHITECTURE.md`, `docs/NOTES.md`.
+
 </details>
 
 ---
@@ -317,30 +351,39 @@ Companion docs: `docs/implementation-plan.md`.
 ## 🧪 Research Themes
 
 ### 🧠 Autonomous Evolution
+
 LLMs iteratively improving their own logic and tools through self-correction and performance-based evolution — see [`openevolve-guide`](https://github.com/subho004/openevolve-guide).
 
 ### 📖 Model Fine-Tuning, Alignment & Distillation
+
 Advanced alignment strategies including SFT, LoRA/QLoRA, preference optimization (DPO), and knowledge distillation to smaller student models — see [`finetuning-guide`](https://github.com/subho004/finetuning-guide) and [`llm-distillation-guide`](https://github.com/subho004/llm-distillation-guide).
 
 ### 🕸️ Graph-Based Reasoning
+
 Moving beyond flat vector embeddings toward structured knowledge graphs for accurate, traceable RAG — see [`graph-llms`](https://github.com/subho004/graph-llms) and [`okf-knowledge-graph-wiki`](https://github.com/subho004/okf-knowledge-graph-wiki).
 
 ### 🎙️ AI Content Pipelines
+
 Streamlining the path from raw ideas to polished media like podcasts and videos — see [`podcast-automate`](https://github.com/subho004/podcast-automate) and [`omni-video-agent`](https://github.com/subho004/omni-video-agent).
 
 ### 📚 Recursive Research & Long-Context Compliance
-Multi-agent pipelines synthesizing structured evidence from massive (1000+ page) corpora via iterative refinement, BM25 dependency resolution, and LangGraph self-correction — see [`agentic-deep-reader`](https://github.com/subho004/agentic-deep-reader) and [`bm25-rlm-agent`](https://github.com/subho004/bm25-rlm-agent).
+
+Multi-agent pipelines synthesizing structured evidence from massive (1000+ page) corpora via iterative refinement, BM25 dependency resolution, and LangGraph self-correction — see [`agentic-deep-reader`](https://github.com/subho004/agentic-deep-reader), [`bm25-rlm-agent`](https://github.com/subho004/bm25-rlm-agent), and [`multidoc-agent-java`](https://github.com/subho004/multidoc-agent-java).
 
 ### 🗺️ Generative World Simulations & RPGs
+
 LLM-driven role-playing simulations with structured intent parsing, episodic memory reflection, emergent trade economies, and rumor propagation — see [`llm-rpg-world-simulator`](https://github.com/subho004/llm-rpg-world-simulator).
 
 ### 💾 Stateful Memory & OS-Style Agent Architectures
+
 LLMs as operating systems: tiered memory hierarchies (RAM vs. disk), tool-driven memory paging, context eviction/summarization, and versioned memory histories — see [`mem-git-agent`](https://github.com/subho004/mem-git-agent).
 
 ### ⚡ High-Efficiency Vector Quantization & Semantic Search
+
 Ultra-low-bit quantization à la Google Research's TurboQuant (1536-dim → 2–4 bits, no training/codebooks) benchmarked against FAISS — see [`turboquant-personal-ai`](https://github.com/subho004/turboquant-personal-ai).
 
 ### 🤖 Multi-Agent Planning & Self-Correction
+
 Decomposing complex queries into parallelized DAG execution plans or dynamic workflows with self-reflection, browser automation, sandboxed runtimes, hybrid retrieval, and human-in-the-loop verification — see [`omni-agent`](https://github.com/subho004/omni-agent) and [`rlm-due-diligence-agents`](https://github.com/subho004/rlm-due-diligence-agents).
 
 ---

@@ -74,3 +74,6 @@
 [submodule "agentic-video-generator"]
 	path = agentic-video-generator
 	url = https://github.com/subho004/omni-video-agent
+[submodule "langchain4j-test"]
+	path = langchain4j-test
+	url = https://github.com/subho004/multidoc-agent-java
