@@ -77,3 +77,9 @@
 [submodule "langchain4j-test"]
 	path = langchain4j-test
 	url = https://github.com/subho004/multidoc-agent-java
+[submodule "dictate"]
+	path = dictate
+	url = https://github.com/subho004/dictate
+[submodule "office-ai"]
+	path = office-ai
+	url = https://github.com/subho004/office-ai

@@ -7,7 +7,7 @@
 **A monorepo of cutting-edge AI research, autonomous agents, and experimental LLM demos.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![Projects](https://img.shields.io/badge/projects-20-blue.svg)](#-featured-projects)
+[![Projects](https://img.shields.io/badge/projects-22-blue.svg)](#-featured-projects)
 [![Git Submodules](https://img.shields.io/badge/git-submodules-orange.svg)](#%EF%B8%8F-getting-started)
 [![Python](https://img.shields.io/badge/python-3.10%2B-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-009688.svg?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
@@ -57,6 +57,8 @@ Project names below match their upstream GitHub repository names. Click any proj
 | [`rlm-due-diligence-agents`](https://github.com/subho004/rlm-due-diligence-agents) | Autonomous investment analyst leveraging LangChain Deep Agents & RLM-style dynamic workflows to run end-to-end technical, market, and financial due diligence with human-in-the-loop validation. | LangChain, Deep Agents, RLM, Python                                                                            |
 | [`omni-video-agent`](https://github.com/subho004/omni-video-agent)                 | End-to-end automated video generation: researches the web, writes a storyboard, generates clips (Veo 3.1) and music (Lyria 3), and compiles the final video.                                     | LangChain Deep Agents, Gemini (Veo 3.1, Lyria 3, Nano Banana 2), crawl4ai, MarkItDown, FastAPI, SQLite, ffmpeg |
 | [`multidoc-agent-java`](https://github.com/subho004/multidoc-agent-java)           | Claude-Code-style multi-doc Q&A agent: planner + recursive research sub-agents over hybrid dense + BM25 + knowledge-graph retrieval, with cited answers.                                         | Java 25, LangChain4j, Gemini, Javalin, SQLite, Lucene, MarkItDown                                              |
+| [`dictate`](https://github.com/subho004/dictate)                                   | System-wide voice dictation and select-to-edit desktop app: press a hotkey, speak, and text is transcribed and pasted at the cursor, or used as an AI edit instruction if text is selected.      | Tauri, Rust, TypeScript, AssemblyAI, Gemini                                                                    |
+| [`office-ai`](https://github.com/subho004/office-ai)                               | Browser-based AI office suite: an agent builds spreadsheets, documents, and presentations live in an editable canvas next to the chat, with real `.xlsx`/`.docx`/`.pptx` import/export.          | Next.js, React, FastAPI, Univer, LiteLLM, Gemini                                                               |
 
 > **Local paths:** each repo is mounted in this monorepo at a submodule path. See the mapping in [Working with Individual Submodules](#-working-with-individual-submodules).
 
@@ -111,6 +113,8 @@ Each project's **display name = its GitHub repo name**. The table below maps tha
 | `rlm-due-diligence-agents` | https://github.com/subho004/rlm-due-diligence-agents | `deep-agents-due-diligence` |
 | `omni-video-agent`         | https://github.com/subho004/omni-video-agent         | `agentic-video-generator`   |
 | `multidoc-agent-java`      | https://github.com/subho004/multidoc-agent-java      | `langchain4j-test`          |
+| `dictate`                  | https://github.com/subho004/dictate                  | `dictate`                   |
+| `office-ai`                | https://github.com/subho004/office-ai                | `office-ai`                 |
 
 To initialize or update a single submodule after cloning:
 
@@ -346,6 +350,37 @@ Companion docs: `docs/PLAN.md`, `docs/ARCHITECTURE.md`, `docs/NOTES.md`.
 
 </details>
 
+<details>
+<summary><b>dictate</b> — System-wide voice dictation & select-to-edit (<code>dictate</code>)</summary>
+
+Voice dictation and voice-driven editing, anywhere on the desktop. Press a global hotkey, speak, and the transcript is pasted at the cursor in any app on macOS or Windows — or, if text is selected first, the utterance is treated as an AI edit instruction applied in place.
+
+- **Selection-as-signal:** no separate "command mode" or keyword triggers — whether text is selected at hotkey-press time decides plain dictation vs. AI edit.
+- **Real-time multilingual transcription** via AssemblyAI, auto-detected with no configuration.
+- **Language-preserving edits:** commands transform selected text without translating it, even across languages.
+- **Fast path for plain dictation:** no LLM call at all unless there's a selection to act on.
+- **Native desktop app:** Tauri (Rust) shell with a TypeScript/Vite frontend, works system-wide across editors, browsers, chat apps, and terminals.
+
+Companion docs: `docs/intent-state-management.md`.
+
+</details>
+
+<details>
+<summary><b>office-ai</b> — AI office suite with a live editable canvas (<code>office-ai</code>)</summary>
+
+Browser-based AI office suite — chat with an agent that reads, writes, and builds spreadsheets, documents, and presentations directly in a live, editable canvas next to the conversation, instead of round-tripping through generated files.
+
+- **Live canvas, not generated files:** every agent tool call (setting a cell, writing a paragraph, adding a slide) repaints the same canvas a human would edit by hand; the user can take over at any point.
+- **Spreadsheets:** multi-tab workbooks with real formulas and formatting via Univer, with `.xlsx`/`.csv`/`.ods` import/export.
+- **Documents:** a live word processor the agent writes and appends to, with `.docx` import/export.
+- **Presentations:** a from-scratch PPTX engine (not a wrapper around an external converter) that edits real OOXML — add/reorder slides, move/resize shapes, recolor, edit text — while leaving untouched parts of the file byte-identical.
+- **Reference documents:** attach existing spreadsheets, docs, or images to a chat for the agent to read from without disturbing the live canvas.
+- **Architecture:** Next.js/React frontend, a thin FastAPI backend relaying tool calls over WebSocket, and LiteLLM fronting Gemini (or any provider) — the backend never touches document bytes directly.
+
+Companion docs: `docs/` (architecture notes, screenshots).
+
+</details>
+
 ---
 
 ## 🧪 Research Themes
@@ -385,6 +420,10 @@ Ultra-low-bit quantization à la Google Research's TurboQuant (1536-dim → 2–
 ### 🤖 Multi-Agent Planning & Self-Correction
 
 Decomposing complex queries into parallelized DAG execution plans or dynamic workflows with self-reflection, browser automation, sandboxed runtimes, hybrid retrieval, and human-in-the-loop verification — see [`omni-agent`](https://github.com/subho004/omni-agent) and [`rlm-due-diligence-agents`](https://github.com/subho004/rlm-due-diligence-agents).
+
+### 🖥️ AI-Native Productivity Tools
+
+Bringing agentic LLMs directly into everyday desktop and office workflows — system-wide voice dictation with select-to-edit, and a live, editable canvas for spreadsheets, documents, and presentations — see [`dictate`](https://github.com/subho004/dictate) and [`office-ai`](https://github.com/subho004/office-ai).
 
 ---
 
