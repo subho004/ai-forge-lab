@@ -7,7 +7,7 @@
 **A monorepo of cutting-edge AI research, autonomous agents, and experimental LLM demos.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![Projects](https://img.shields.io/badge/projects-22-blue.svg)](#-featured-projects)
+[![Projects](https://img.shields.io/badge/projects-23-blue.svg)](#-featured-projects)
 [![Git Submodules](https://img.shields.io/badge/git-submodules-orange.svg)](#%EF%B8%8F-getting-started)
 [![Python](https://img.shields.io/badge/python-3.10%2B-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-009688.svg?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
@@ -59,6 +59,7 @@ Project names below match their upstream GitHub repository names. Click any proj
 | [`multidoc-agent-java`](https://github.com/subho004/multidoc-agent-java)           | Claude-Code-style multi-doc Q&A agent: planner + recursive research sub-agents over hybrid dense + BM25 + knowledge-graph retrieval, with cited answers.                                         | Java 25, LangChain4j, Gemini, Javalin, SQLite, Lucene, MarkItDown                                              |
 | [`dictate`](https://github.com/subho004/dictate)                                   | System-wide voice dictation and select-to-edit desktop app: press a hotkey, speak, and text is transcribed and pasted at the cursor, or used as an AI edit instruction if text is selected.      | Tauri, Rust, TypeScript, AssemblyAI, Gemini                                                                    |
 | [`office-ai`](https://github.com/subho004/office-ai)                               | Browser-based AI office suite: an agent builds spreadsheets, documents, and presentations live in an editable canvas next to the chat, with real `.xlsx`/`.docx`/`.pptx` import/export.          | Next.js, React, FastAPI, Univer, LiteLLM, Gemini                                                               |
+| [`omnia`](https://github.com/subho004/omnia)                                       | Private, self-hosted personal AI agent platform: one isolated OpenClaw sandbox per user with chat, scheduled automations, a managed browser, approvals and a curated API. Alternative to Instinct, Muse and similar companions.| Python, FastAPI, PostgreSQL, NemoClaw/OpenClaw, Docker                                                         |
 
 > **Local paths:** each repo is mounted in this monorepo at a submodule path. See the mapping in [Working with Individual Submodules](#-working-with-individual-submodules).
 
@@ -115,6 +116,7 @@ Each project's **display name = its GitHub repo name**. The table below maps tha
 | `multidoc-agent-java`      | https://github.com/subho004/multidoc-agent-java      | `langchain4j-test`          |
 | `dictate`                  | https://github.com/subho004/dictate                  | `dictate`                   |
 | `office-ai`                | https://github.com/subho004/office-ai                | `office-ai`                 |
+| `omnia`                    | https://github.com/subho004/omnia                    | `omnia`                     |
 
 To initialize or update a single submodule after cloning:
 
@@ -381,6 +383,23 @@ Companion docs: `docs/` (architecture notes, screenshots).
 
 </details>
 
+<details>
+<summary><b>omnia</b> — Private, self-hosted personal AI agent (<code>omnia</code>)</summary>
+
+A local control plane that gives each user a private, persistent OpenClaw agent instance, managed through NemoClaw and OpenShell. Built as an open, self-hostable alternative to personal agents such as Instinct and Muse.
+
+- **Isolation by design:** one sandbox, volume and browser origin per user (`https://{uuid}.claw.localhost`), with ownership always resolved from the database and a public-only egress proxy for tenant browsers.
+- **Safe sessions:** cookie-based JWTs, CSRF protection, single-use launch tickets and instant revocation of live streams.
+- **Curated API:** chat, sessions, tasks, reviews, schedules and a managed browser under `/api/assistant`, with no gateway credentials exposed to the browser.
+- **Durable provisioning:** PostgreSQL-backed jobs that survive restarts and recover unhealthy instances.
+- **Roadmap:** approvals and audit, calendar and email connections, editable memory, messaging channels, safe skills and multi-host scaling.
+
+**Key tech:** Python, FastAPI, PostgreSQL 18, NemoClaw/OpenClaw, Docker, LM Studio/OpenRouter.
+
+Companion docs: `docs/` (architecture, API reference, roadmap).
+
+</details>
+
 ---
 
 ## 🧪 Research Themes
@@ -424,6 +443,10 @@ Decomposing complex queries into parallelized DAG execution plans or dynamic wor
 ### 🖥️ AI-Native Productivity Tools
 
 Bringing agentic LLMs directly into everyday desktop and office workflows — system-wide voice dictation with select-to-edit, and a live, editable canvas for spreadsheets, documents, and presentations — see [`dictate`](https://github.com/subho004/dictate) and [`office-ai`](https://github.com/subho004/office-ai).
+
+### 🔐 Private Personal Agents
+
+Self-hosted, per-user isolated agents with approvals, audit and local inference, as an open alternative to hosted personal assistants — see [`omnia`](https://github.com/subho004/omnia).
 
 ---
 

@@ -83,3 +83,6 @@
 [submodule "office-ai"]
 	path = office-ai
 	url = https://github.com/subho004/office-ai
+[submodule "omnia"]
+	path = omnia
+	url = https://github.com/subho004/omnia
